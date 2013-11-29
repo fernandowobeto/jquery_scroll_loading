@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="jquery.js"></script>
+		<script src="jquery.scroll_loading.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="div-scroll">
+			<p>Fernando</p>
+		</div>
+
+		<script>
+			$('.div-scroll').scroll_loading({
+				url: 'data.php',
+				data:{
+					id:1,
+					nome: 'Fernando'
+				},
+				callback: function(el,html){
+					el.append(html);
+				}
+			});
+		</script>
+
+	</body>
+</html>
